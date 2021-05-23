@@ -21,7 +21,7 @@ export default {
     })
 
     // params: html element, attrs, "children"
-    return () => h(`h${level}`, {}, modifiedSlot);
+    return () => h(`h${level}`, modifiedSlot);
   }
 };
 </script>

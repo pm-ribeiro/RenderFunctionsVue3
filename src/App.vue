@@ -2,12 +2,14 @@
   <heading level="1">
     TV finder
   </heading>
+
+  <MyShows></MyShows>
 </template>
 
 <script setup>
 import Heading from "./components/Heading.vue";
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
+import MyShows from "./components/MyShows.vue";
+
 </script>
 
 <style>
@@ -18,5 +20,9 @@ import Heading from "./components/Heading.vue";
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
