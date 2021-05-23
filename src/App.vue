@@ -1,5 +1,5 @@
 <template>
-  <heading level="1"/>
+  <heading level="2"/>
 </template>
 
 <script setup>

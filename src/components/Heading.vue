@@ -9,9 +9,9 @@ export default {
     }
   },
 
-  setup({ level }) {
+  setup({level}) {
     // params: html element, attrs, "children"
-    return () => h(`h${level}`, {}, `The Heading! ${level}`);
+    return () => h(`h${level}`, {}, `Dynamic Heading! h${level}`);
   }
 };
 </script>
