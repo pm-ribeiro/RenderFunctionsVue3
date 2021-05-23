@@ -1,5 +1,7 @@
 <script>
+// h => hyperscript
 import { h } from "vue";
+
 export default {
   props: {
     level: {
@@ -7,15 +9,9 @@ export default {
     }
   },
 
-  setup({ level }, { slots }) {
-    const slot = slots ? slots.default() : [];
-    console.log(slot);
-    const modifiedSlot = slot.map(({ children }) =>
-      h("div", { style: "color:purple" }, children)
-    );
-    return () => h(`h${level}`, modifiedSlot);
+  setup({ level }) {
+    // params: html element, attrs, "children"
+    return () => h(`h${level}`, {}, `The Heading! ${level}`);
   }
 };
 </script>
-
-<style lang="scss" scoped></style>

@@ -1,25 +1,9 @@
 <template>
-  <heading>TV Finder</heading>
-  <render-me>
-    <!-- <template #namedSlot>
-          <h3>Hello From Named Slot</h3>
-        </template> -->
-    <!-- <h4>Hi From Default slot</h4> -->
-    <template #sc="{ shows }">
-      <h3 v-if="shows?.length > 0">
-        Average Score {{ computedAverage(shows).toFixed(2) }}
-      </h3>
-    </template>
-  </render-me>
+  <heading level="1"/>
 </template>
 
 <script setup>
-import RenderMe from "./components/RenderMe.vue";
 import Heading from "./components/Heading.vue";
-
-const computedAverage = (shows) =>
-  shows.reduce((acc, info) => +info.score + acc, 0) / shows.length;
-
 // This starter template is using Vue 3 experimental <script setup> SFCs
 // Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
 </script>
