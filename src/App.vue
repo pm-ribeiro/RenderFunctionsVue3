@@ -3,12 +3,20 @@
     TV finder
   </heading>
 
-  <MyShows></MyShows>
+  <MyShows>
+    <template v-slot:sc="{shows}">
+      <h3 v-if="shows?.length > 0">
+        Average Score: {{computedAvg(shows).toFixed()}}
+      </h3>
+    </template>
+  </MyShows>
 </template>
 
 <script setup>
 import Heading from "./components/Heading.vue";
 import MyShows from "./components/MyShows.vue";
+
+const computedAvg = shows => shows.reduce((acc,info) => +info.score + acc, 0) / shows.length;
 
 </script>
 

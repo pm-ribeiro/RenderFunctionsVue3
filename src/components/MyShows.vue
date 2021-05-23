@@ -3,7 +3,7 @@
 import {h, ref} from "vue";
 
 export default {
-  setup() {
+  setup(_, {slots}) {
     let inputValue = ref(null),
         shows = ref(null),
         error = ref(null);
@@ -24,6 +24,7 @@ export default {
       console.log('Show = ', shows.value);
     };
 
+    const scopedSlot = show => (slots.sc ? slots.sc(show) : []);
 
     return () => h(
       "form",
@@ -33,6 +34,8 @@ export default {
       },
       // Children
       [
+        // Slot
+        scopedSlot({shows: shows.value }),
         // The input field
         h(
           "input",
