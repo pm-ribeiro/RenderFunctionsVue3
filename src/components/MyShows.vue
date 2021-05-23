@@ -34,8 +34,9 @@ export default {
       },
       // Children
       [
-        // Slot
+        // scoped slots
         scopedSlot({shows: shows.value }),
+
         // The input field
         h(
           "input",
