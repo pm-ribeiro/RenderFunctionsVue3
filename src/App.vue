@@ -1,5 +1,7 @@
 <template>
-  <heading level="2"/>
+  <heading level="1">
+    TV finder
+  </heading>
 </template>
 
 <script setup>
