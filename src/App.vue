@@ -1,12 +1,10 @@
 <template>
-  <heading level="1">
-    TV finder
-  </heading>
+  <heading level="1"> TV finder </heading>
 
   <MyShows>
-    <template v-slot:sc="{shows}">
+    <template v-slot:sc="{ shows }">
       <h3 v-if="shows?.length > 0">
-        Average Score: {{computedAvg(shows).toFixed()}}
+        Average Score: {{ computedAvg(shows).toFixed() }}
       </h3>
     </template>
   </MyShows>
@@ -16,8 +14,8 @@
 import Heading from "./components/Heading.vue";
 import MyShows from "./components/MyShows.vue";
 
-const computedAvg = shows => shows.reduce((acc,info) => +info.score + acc, 0) / shows.length;
-
+const computedAvg = (shows) =>
+  shows.reduce((acc, info) => +info.score + acc, 0) / shows.length;
 </script>
 
 <style>
