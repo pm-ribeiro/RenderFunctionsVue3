@@ -1,0 +1,16 @@
+<script>
+import { h } from "vue";
+
+export default {
+  props: {
+    level: {
+      default: 1,
+    },
+  },
+
+  setup({ level }) {
+    // params: html element, attrs, "children"
+    return () => h(`h${level}`, {}, `The Heading! ${level}`);
+  },
+};
+</script>
