@@ -1,4 +1,11 @@
 <script>
+// 1. Create Basic Div
+// 2. create basic layout
+// map through data
+// click handlers
+// v-if error
+// default slots
+
 import { h, ref } from "vue";
 
 export default {
