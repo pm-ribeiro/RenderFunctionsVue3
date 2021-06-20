@@ -6,6 +6,10 @@
       <el-button type="primary">SimpleHeader</el-button>
     </router-link>
 
+    <router-link to="/ModelExample">
+      <el-button type="primary">v-model example</el-button>
+    </router-link>
+
     <router-link to="/TVFinder">
       <el-button type="primary">TVFinder</el-button>
     </router-link>

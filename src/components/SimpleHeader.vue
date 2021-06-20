@@ -1,5 +1,4 @@
 <script>
-// h => hyperscript
 import { h } from "vue";
 
 export default {

@@ -1,8 +1,30 @@
 <template>
-  <router-view></router-view>
+  <div id="app">
+    <div id="back-button" v-if="onRoot()">
+      <router-link to="/">
+        <el-button type="primary">
+          <i class="el-icon-back"></i>
+          Home
+        </el-button>
+      </router-link>
+    </div>
+    <router-view></router-view>
+  </div>
 </template>
 
-<script setup>
+<script>
+export default {
+  watch: {
+    $route() {
+      this.onRoot();
+    },
+  },
+  methods: {
+    onRoot() {
+      return this.$route.fullPath !== "/";
+    },
+  },
+};
 </script>
 
 <style>
@@ -17,5 +39,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+#back-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 40px;
+  padding-top: 20px;
 }
 </style>

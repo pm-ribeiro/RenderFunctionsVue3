@@ -47,6 +47,13 @@ export default {
 
           // The input field
           h("input", {
+            style: {
+              border: "1px solid grey",
+              borderRadius: "4px",
+              padding: "12px",
+              width: "300px",
+            },
+            placeholder: "Type the show name...",
             onInput: (event) => {
               {
                 inputValue = event.target.value;
@@ -58,6 +65,7 @@ export default {
           h(
             "button",
             {
+              class: "primary-button",
               onClick: async () => {
                 searchText(inputValue);
               },
@@ -93,5 +101,16 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+}
+
+.primary-button {
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 12px 20px;
+  margin-left: 24px;
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+  cursor: pointer;
 }
 </style>
